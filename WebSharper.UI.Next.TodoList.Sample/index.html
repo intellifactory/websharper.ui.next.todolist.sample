@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My TODO list</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <style>
+        body { font-family: sans-serif; }
+        ul { list-style: none; }
+        .task-text { color: green; }
+        .task-text.checked { color: red; }
+    </style>
+    <link rel="stylesheet" type="text/css" href="Content/WebSharper.UI.Next.TodoList.Sample.css" />
+    <script type="text/javascript" src="Content/WebSharper.UI.Next.TodoList.Sample.head.js"></script>
+</head>
+<body>
+    <h1>My TODO list</h1>
+    <div id="tasks"></div>
+    <div style="display:none" data-children-template="Main">
+        <ul data-hole="ListContainer">
+            <li data-template="ListItem">
+                <label class="task-text" data-attr="ShowDone">
+                    <input type="checkbox" data-var="Done" />
+                    ${Task}
+                </label>
+                <button data-event-click="Clear">Clear</button>
+            </li>
+        </ul>
+        <div>
+            <label>New task: <input data-var="NewTaskName" placeholder="Add task here" /></label>
+            <button data-event-click="Add">Add</button>
+            <div>You are about to add: ${NewTaskName}</div>
+            <button data-event-click="ClearCompleted">Clear Completed Tasks</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="Content/WebSharper.UI.Next.TodoList.Sample.js"></script>
+</body>
+</html>
