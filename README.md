@@ -12,7 +12,7 @@ This project requires WebSharper and WebSharper.UI.Next, and it is configured to
 
 You can recreate this project in Visual Studio, Xamarin Studio or CloudSharper by following these steps:
 
- 1. Create a new WebSharper UI.NextSingle-Page Application project.
+ 1. Create a new WebSharper UI.Next Single-Page Application project.
  2. Open `Client.fs` and replace its contents with the contents of `Client.fs` from this repository.
  3. Add an entry point "`<div id="main"></div>`" to `index.html` in the body tag before the `<script>` link.
 
